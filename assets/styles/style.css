@@ -1,0 +1,371 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Work+Sans:wght@600&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 5rem;
+  --font-semi: 600;
+  /*===== Colores =====*/
+  --first-color: rgba(248, 227, 46, 1);
+  --second-color: rgba(197, 92, 23, 1);
+  --body-bg: rgba(2, 2, 2, 1);
+  /*===== Fuente y tipografia =====*/
+  --body-font: "Inter", sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
+  /*===== Margenes =====*/
+  --mb-2: 1rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  /*===== z index =====*/
+  --z-back: -10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: 0.875rem;
+  }
+}
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: #fff;
+  background-color: var(--body-bg);
+  overflow-x: hidden !important;
+  min-height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background: url(../images/homeBg.svg) center center no-repeat;
+  background-size: cover;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*===== CLASS CSS ===== */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding-block: 10px;
+  z-index: 100;
+}
+header .container {
+  height: 3rem;
+}
+header .container .logo-div a {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #f8e32e;
+}
+header .container .logo-div a img {
+  width: 50px;
+}
+@media (max-width: 600px) {
+  header .container .nav-ul {
+    display: none;
+  }
+}
+header .container .nav-ul ul li a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #ffffff;
+  text-transform: capitalize;
+}
+header .container .buy-btn {
+  padding: 10px 15px;
+  border: 1px solid;
+  border-color: var(--first-color);
+  border-radius: 30px !important;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ffffff;
+  filter: drop-shadow(0px 4px 8px rgba(9, 50, 67, 0.16));
+}
+
+#hero {
+  width: 100%;
+  padding-block: 50px;
+}
+#hero .container .row h1.title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 88px;
+  text-transform: capitalize;
+}
+#hero .container .row h1.title span {
+  color: var(--first-color) !important;
+}
+#hero .container .row p.info {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  /* or 200% */
+  color: #ffffff;
+}
+#hero .container .row .btn-link {
+  padding: 10px 15px;
+  border: 1px solid;
+  border-color: var(--first-color);
+  border-radius: 30px !important;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ffffff;
+  filter: drop-shadow(0px 4px 8px rgba(9, 50, 67, 0.16));
+}
+#hero .container .row .abso-di {
+  width: 121.95px;
+  height: 158.72px;
+  background: linear-gradient(92.86deg, #f8e32e 49.21%, #f8772e 95.06%);
+  filter: blur(100px);
+}
+@media (max-width: 600px) {
+  #hero .container .row h1.title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    /* or 121% */
+    color: #ffffff;
+  }
+}
+
+#about {
+  width: 100%;
+  padding-block: 50px;
+}
+#about .container .row h1.title {
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 64px;
+  /* or 123% */
+  color: #f8e32e;
+  text-transform: capitalize;
+}
+@media (max-width: 600px) {
+  #about .container .row h1.title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    /* or 120% */
+    color: #f8e32e;
+  }
+  #about .container .row .img-col {
+    order: -1;
+  }
+}
+#about .container .row p.des {
+  font-size: 16px;
+  line-height: 32px;
+  /* or 200% */
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 400px;
+}
+#about .container .row a.btn {
+  padding: 10px 15px;
+  border: 1px solid;
+  border-color: var(--first-color);
+  border-radius: 30px !important;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ffffff;
+  filter: drop-shadow(0px 4px 8px rgba(9, 50, 67, 0.16));
+}
+
+#tokenomics {
+  width: 100%;
+  padding-block: 50px;
+}
+#tokenomics .container .row h1.title {
+  font-size: 52px;
+  line-height: 64px;
+  color: #f8e32e;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+@media (max-width: 600px) {
+  #tokenomics .container .row h1.title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    /* or 120% */
+    color: #f8e32e;
+  }
+}
+#tokenomics .container .row p.des {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  /* or 200% */
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 450px;
+}
+#tokenomics .container .row .token-div .tkn-card h1 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 140%;
+  /* or 67px */
+  color: #f8e32e;
+}
+#tokenomics .container .row .token-div .tkn-card h3 {
+  font-size: 20px;
+  line-height: 32px;
+  text-transform: capitalize;
+  color: #f8e32e;
+}
+@media (max-width: 600px) {
+  #tokenomics .container .row .token-div .tkn-card h1 {
+    font-size: 32px;
+    line-height: 140%;
+    /* identical to box height, or 45px */
+    color: #f8e32e;
+  }
+}
+
+#roadmap {
+  width: 100%;
+  padding-block: 50px;
+}
+#roadmap .container h1.title {
+  font-size: 52px;
+  line-height: 64px;
+  /* identical to box height, or 123% */
+  color: #f8e32e;
+  text-transform: capitalize;
+  font-weight: 700;
+  text-align: center;
+}
+#roadmap .container .roadmap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+#roadmap .container .milestone {
+  position: relative;
+}
+#roadmap .container .milestone::before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 2px);
+  top: -50px;
+  height: 50px;
+  width: 4px;
+  background-color: var(--first-color);
+}
+#roadmap .container .card {
+  background: rgb(37, 35, 35);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  position: relative;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  /* or 160% */
+  height: 207px;
+  text-align: center;
+  color: #ffffff;
+}
+#roadmap .container .card h3 {
+  font-size: 32px;
+  line-height: 32px;
+  /* identical to box height, or 100% */
+  color: #f8e32e;
+}
+#roadmap .container .card::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: calc(50% - 8px);
+  height: 16px;
+  width: 16px;
+  background-color: var(--first-color);
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+  border-radius: 50%;
+}
+#roadmap .container .card::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: calc(50% - 2px);
+  height: calc(100% - 8px);
+  width: 4px;
+  background-color: #ccc;
+}
+#roadmap .container .card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+#roadmap .container .card p {
+  font-size: 18px;
+  margin: 16px 0 0;
+}
+#roadmap .container .card:last-child::after {
+  display: none;
+}
+
+footer {
+  width: 100%;
+  padding-block: 50px;
+}
+footer p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 180%;
+  /* identical to box height, or 36px */
+  color: #f8e32e;
+}/*# sourceMappingURL=style.css.map */
