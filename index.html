@@ -20,6 +20,9 @@
     <title>Ape Girl - Official</title>
   </head>
   <body>
+    <section class="loading">
+      <div class="loader"></div>
+    </section>
     <header class="container-fluid">
       <nav class="container d-flex justify-content-between align-items-center">
         <div class="logo-div">
@@ -164,6 +167,12 @@
     <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script>
+      const loading = document.querySelector(".loading");
+      window.addEventListener("load", () => {
+        loading.style.display = "none";
+      });
+    </script>
     <script>
       AOS.init();
     </script>
